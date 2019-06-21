@@ -6,7 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-
         int vertices = ScannerWrapper.getInstance().nextInt();
         int edges = ScannerWrapper.getInstance().nextInt();
 
@@ -18,7 +17,7 @@ public class Main {
             graph.addEdge(u-1, v-1);
 
         }
-        
+
         System.out.println(graph.countCycle());
 
     }
