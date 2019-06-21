@@ -2,6 +2,11 @@ package lotr;
 
 import lotr.utility.ScannerWrapper;
 
+/**
+ * @author Mohammad Amin Shafiee
+ * @author Fatemeh Mahvari
+ */
+
 public class Main {
 
     public static void main(String[] args) {
