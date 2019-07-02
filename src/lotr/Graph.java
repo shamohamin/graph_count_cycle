@@ -1,7 +1,14 @@
 package lotr;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
+
+/**
+ * @author Mohammad Amin Shafiee
+ * @author Fatemeh Mahvari
+ */
 
 public class Graph {
 
@@ -16,6 +23,15 @@ public class Graph {
             neighbors[i] = new LinkedList<>();
         }
 
+    }
+
+    public int getVertices() {
+        return vertices;
+    }
+
+    //must use a safe approach
+    public LinkedList<Integer>[] getNeighbors(){
+        return neighbors;
     }
 
     public void addEdge(int u, int v){
