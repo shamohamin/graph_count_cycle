@@ -1,9 +1,12 @@
 package lotr;
 
+import lotr.utility.ScannerWrapper;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
 /**
  * @author Mohammad Amin Shafiee
@@ -12,8 +15,33 @@ import java.util.List;
 
 public class Graph {
 
+
     private int vertices;
     private LinkedList<Integer>[]  neighbors;
+
+
+    public static void main(String[] args) {
+
+        Scanner scannerWrapper = new Scanner(System.in);
+
+        int vertices = scannerWrapper.nextInt();
+        int edges = scannerWrapper.nextInt();
+
+        Graph graph = new Graph(vertices);
+
+        for(int i=0; i<edges; i++){
+            int u = scannerWrapper.nextInt();
+            int v = scannerWrapper.nextInt();
+            graph.addEdge(u-1, v-1);
+
+        }
+
+        System.out.println(graph.countCycle());
+
+    }
+
+
+
 
     public Graph(int vertices){
         this.vertices = vertices;
