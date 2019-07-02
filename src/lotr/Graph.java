@@ -75,7 +75,7 @@ public class Graph {
         if(!isVisited[neighbor1]){
             //return true && isRing(start, neighbor1, isVisited);
             return isRing(start, neighbor1, isVisited);
-        }else if(isVisited[neighbor2]){
+        }else if(!isVisited[neighbor2]){
             //return true && isRing(start, neighbor2, isVisited);
             return isRing(start, neighbor2, isVisited);
         }
